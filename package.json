@@ -1,0 +1,26 @@
+{
+  "name": "vkeyboard-electron",
+  "version": "1.0.0",
+  "description": "Virtual Keyboard for Dactylography Learning Purpose",
+  "main": "dist/main.js",
+  "scripts": {
+    "build_main": "webpack --config ./webpack/production/webpack.main.js",
+    "build_renderer": "webpack --config ./webpack/production/webpack.renderer.js",
+    "build_preload": "webpack --config ./webpack/production/webpack.preload.js",
+    "build": "npm run build_main && npm run build_renderer && npm run build_preload",
+    "buil": "webpack --config ./webpack/production/webpack.config.js",
+    "start": "webpack && electron ."
+  },
+  "author": "lzins",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^23.1.1",
+    "sass": "^1.58.3",
+    "sass-loader": "^13.2.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-merge": "^5.8.0"
+  }
+}
